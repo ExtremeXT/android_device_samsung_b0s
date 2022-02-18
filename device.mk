@@ -32,7 +32,9 @@ PRODUCT_PACKAGES += \
 
 # S Pen
 PRODUCT_PACKAGES += \
-    sec_e-pen.idc
+    sec_e-pen.idc \
+    SPenActions \
+    vendor.samsung.hardware.spen-service
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
