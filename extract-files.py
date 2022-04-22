@@ -28,6 +28,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libexynoscamera3.so',
     ): blob_fixup()
         .add_needed('libui_shim.so'),
+    'vendor/lib64/libexynoscamera3.so': blob_fixup()
+        .sig_replace('16 00 00 94 0B 00 00 14', '1F 20 03 D5 0B 00 00 14')  # NOP SecCameraIPCtoRIL::enable m_sendRequest()
+        .sig_replace('92 FF FF 97 0B 00 00 14', '1F 20 03 D5 0B 00 00 14'), # NOP SecCameraIPCtoRIL::disable m_sendRequest()
 }  # fmt: skip
 
 module = ExtractUtilsModule(
