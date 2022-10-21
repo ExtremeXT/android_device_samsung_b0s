@@ -30,6 +30,10 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayDevice \
     WiFiOverlayDevice
 
+# S Pen
+PRODUCT_PACKAGES += \
+    sec_e-pen.idc
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
