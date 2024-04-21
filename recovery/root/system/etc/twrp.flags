@@ -6,7 +6,6 @@
 /recovery	emmc		/dev/block/bootdevice/by-name/recovery		flags=backup=1
 /vendor_boot	emmc		/dev/block/bootdevice/by-name/vendor_boot	flags=backup=1;flashimg=1;display="Vendor Boot"
 
-/system_dlkm	erofs		/dev/block/bootdevice/by-name/system_dlkm		flags=display="System DLKM"
 /system_image	emmc		/dev/block/bootdevice/by-name/system		flags=backup=1;flashimg=1
 /odm_image	emmc		/dev/block/bootdevice/by-name/odm		flags=backup=1;flashimg=1;display="ODM Image"
 /product_image	emmc		/dev/block/bootdevice/by-name/product		flags=backup=1;flashimg=1;display="Product Image"

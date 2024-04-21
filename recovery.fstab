@@ -4,7 +4,6 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 system                  /system	            erofs     ro	                                                wait,logical,first_stage_mount
 vendor                  /vendor	            erofs     ro	                                                wait,logical,first_stage_mount
-system_dlkm             /system_dlkm        erofs     ro                                                    wait,logical,first_stage_mount
 vendor_dlkm             /vendor_dlkm        erofs     ro	                                                wait,logical,first_stage_mount
 product                 /product            erofs     ro	                                                wait,logical,first_stage_mount
 odm                     /odm                erofs     ro	                                                wait,logical,first_stage_mount

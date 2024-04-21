@@ -41,8 +41,8 @@
 # dma-heap
 /dev/dma_heap/crypto                0660   system     system
 /dev/dma_heap/crypto-uncached       0660   system     system
-/dev/dma_heap/camera                0660   system     camera
-/dev/dma_heap/camera-uncached       0660   system     camera
+/dev/dma_heap/camera                0660   system     system
+/dev/dma_heap/camera-uncached       0660   system     system
 
 /dev/dma_heap/vframe-secure         0660   system     drmrpc
 /dev/dma_heap/vscaler-secure        0660   system     system
@@ -51,6 +51,7 @@
 # dma-heap with prefix system-secure
 /dev/dma_heap/system-secure-gpu_buffer-secure     0444   system     system
 /dev/dma_heap/system-secure-vstream-secure        0444   system     drmrpc
+/dev/dma_heap/system-secure-vframe-secure         0444   system     drmrpc
 
 # gscalers
 /dev/video23              0660   media      graphics
@@ -83,9 +84,10 @@
 /dev/video7               0660   mediacodec mediadrm
 /dev/video8               0660   mediacodec mediadrm
 /dev/video9               0660   mediacodec mediadrm
+/dev/video10              0660   mediacodec mediadrm
+/dev/video11              0660   mediacodec mediadrm
 
 # camera
-/dev/video100             0660   cameraserver   camera
 /dev/video101             0660   cameraserver   camera
 /dev/video102             0660   cameraserver   camera
 /dev/video103             0660   cameraserver   camera
@@ -171,11 +173,12 @@
 /dev/is_tuning_json       0660   cameraserver   camera
 /dev/is_tuning_socket     0660   cameraserver   camera
 
-# Google FRP solution
-/dev/block/by-name/persistent    0660    system    system
+
+# For FRP
+/dev/block/by-name/persist	      0600   system          system
 
 # Reactivation lock
-/dev/block/by-name/steady    0660    system    system
+/dev/block/by-name/param    0660    root    system
 
 # dmabuf
 /dev/dmabuf_container     0660   cameraserver   camera
@@ -185,6 +188,8 @@
 /dev/m2m1shot_jpeg	      0660   media          media
 /dev/video12              0660   cameraserver   media
 /dev/video13              0660   cameraserver   media
+/dev/jsqz                 0660   mediacodec   	camera
+/dev/mcfrc                0660   mediacodec   	system
 
 # audio
 /dev/seiren               0660   system     audio
@@ -207,6 +212,9 @@
 /dev/block/by-name/modem_a  0440   radio      radio
 /dev/block/by-name/modem_b  0440   radio      radio
 /dev/umts_ramdump0        0660   radio      radio
+
+# dev ril bridge
+/dev/drb	              0660   system     radio
 
 # Diag and AT
 /dev/umts_dm0             0660   system     system
@@ -231,14 +239,10 @@
 /dev/block/by-name/cp_debug 0660   radio      system
 /dev/umts*                  0660   system     radio
 /dev/umts_csd               0660   system     loop_radio
-/dev/smd4                   0660   system     system
+/dev/smd4                   0660   system     radio
 /dev/ramdump_memshare       0660   system     radio
 /dev/rmnet*                 0660   radio      inet
-/dev/usnet*                 0660   radio      inet
-/dev/umts_ciq*              0660   system     system_ext_bridge_rw
-
-# dev ril bridge
-/dev/drb	                0660   system     radio
+/dev/usnet                  0660   radio      inet
 
 # interactive governor parameters
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate			0660	system	system
@@ -261,41 +265,67 @@
 # Voice Trigger Sound (VTS Misc)
 /dev/vts_fio_dev         0660   audioserver   system
 
-# FRP
-/dev/block/by-name/frp          0660   root     system
+# Google FRP solution
+/dev/block/by-name/persistent    0660    system    system
 
-# Camellia
-/dev/camellia_iwc       0660   root     system
-
-# SCSC Bluetooth
-/dev/scsc_h4_0           0660   bluetooth  bluetooth
-
-# SCSC WLAN
-/dev/mx_0_fxm_1_gdb       0660   wifi     wifi
-/dev/mx_0_fxm_2_gdb       0660   wifi     wifi
-/dev/mx_0_wlan_gdb        0660   wifi     wifi
-/dev/mx_0_wpan_gdb        0660   wifi     wifi
-/dev/mx_0_mmap            0660   wifi     wifi
-/dev/mx_client_test_0     0660   wifi     wifi
-/dev/mx_0_debug_sampler   0660   wifi     wifi
-/dev/mx140_usb_clk_test_0 0660   wifi     wifi
-/dev/scsc_log_collector_0 0660   wifi     wifi
-/dev/scsc_log_in_dram_0   0660   wifi     wifi
-/dev/scsc_wlan_mmap_0     0660   wifi     wifi
-/dev/slsi_wlan_dpd_mmap_0 0660   wifi     wifi
+# Reactivation lock
+/dev/block/by-name/steady    0660    system    system
 
 # Sensor Hub
+/dev/ssp_sensorhub        0660   system     system
+/dev/ssp_data_injection   0660   system     system
 /dev/shub_sensorhub        0660   system     system
 /dev/shub_data_injection   0660   system     system
 /dev/iio:device*          0660   system		system
+/dev/batch_io		  0600   system         system
+/sys/devices/platform/14cc0000.contexthub/iio:device*    buffer/enable       0660    system    system
+/sys/devices/platform/14cc0000.contexthub/iio:device*    buffer/length       0660    system    system
 /sys/devices/platform/shub/iio:device*    buffer/enable       0660    system    system
 /sys/devices/platform/shub/iio:device*    buffer/length       0660    system    system
+/sys/bus/iio/devices/iio:device*	poll_delay	0660	system	system
 /sys/bus/iio/devices/iio:device*    0664   system     radio
 
 # grip sensor
-/dev/input/event*                               0660    system    input
-/sys/devices/virtual/input/input*   enable      0660    system    input
-/sys/devices/virtual/input/input*   poll_delay  0660    system    input
+/dev/input/event*				0660	system	input
+/sys/devices/virtual/input/input*   enable      0660	system	input
+/sys/devices/virtual/input/input*   enable2      0660	system	input
+/sys/devices/virtual/input/input*   poll_delay  0660	system	input
+
+# Google FRP solution
+/dev/block/by-name/persistent    0660    system    system
+
+# Reactivation lock
+/dev/block/by-name/steady    0660    system    system
+
+# Range Sensor
+/dev/range_sensor	0660	system system
+
+/sys/class/sensors/range_sensor	ambient		0440	 system	radio
+/sys/class/sensors/range_sensor	cal01		0440	 system	radio
+/sys/class/sensors/range_sensor	cal02		0440	 system	radio
+/sys/class/sensors/range_sensor	cal_uid		0440	 system	radio
+/sys/class/sensors/range_sensor	calibration	0660	 system	radio
+/sys/class/sensors/range_sensor	open_calibration	0660	 system	radio
+/sys/class/sensors/range_sensor	enable		0660	 system	radio
+/sys/class/sensors/range_sensor	frame_rate	0440	 system	radio
+/sys/class/sensors/range_sensor	fw_version	0440	 system	radio
+/sys/class/sensors/range_sensor	mode		0440	 system	radio
+/sys/class/sensors/range_sensor	name		0440	 system	radio
+/sys/class/sensors/range_sensor	range_sigma	0440	 system	radio
+/sys/class/sensors/range_sensor	status		0440	 system	radio
+/sys/class/sensors/range_sensor	target_status	0440	 system	radio
+/sys/class/sensors/range_sensor	temp		0440	 system	radio
+/sys/class/sensors/range_sensor	test01		0440	 system	radio
+/sys/class/sensors/range_sensor	test02		0440	 system	radio
+/sys/class/sensors/range_sensor	test03		0440	 system	radio
+/sys/class/sensors/range_sensor	test_mode	0660	 system	radio
+/sys/class/sensors/range_sensor	uid		0440	 system	radio
+/sys/class/sensors/range_sensor	vendor		0440	 system	radio
+/sys/class/sensors/range_sensor	zone		0440	 system	radio
+
+
+# PROCA dev config
+/dev/proca_config         0440   system     system
 
 #
 # Permissions for Vibrator [
@@ -333,7 +363,7 @@
 /sys/class/sec_vib_inputff/control	use_sep_index		0220	system system
 /sys/class/sec_vib_inputff/control	event_cmd			0664	system system
 /sys/class/sec_vib_inputff/control	lra_resistance		0664	system system
-/sys/class/sec_vib_inputff/control  f0_cal_way		    0440	system system
+/sys/class/sec_vib_inputff/control	f0_cal_way		    0440	system system
 
 # Vibrator nodes permission (vib_info)
 /sys/class/vib_info_class/vib_support_info	intensities			0664	system system
@@ -343,6 +373,3 @@
 #
 # ] Permissions for Vibrator
 #
-
-# PROCA dev config
-/dev/proca_config         0440   system     system
