@@ -51,7 +51,9 @@ BOARD_MKBOOTIMG_ARGS := \
     --tags_offset 0 \
     --header_version 2
 BOARD_ROOT_EXTRA_FOLDERS := \
+    data_mirror \
     efs \
+    omr \
     optics \
     prism
 
@@ -59,7 +61,12 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Android Verified Boot
-BOARD_AVB_ENABLE := false
+BOARD_AVB_ENABLE := true
+BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
@@ -101,6 +108,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 
 # TWRP specific build flags
+TW_DEVICE_VERSION := eXT_v0
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 510

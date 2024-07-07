@@ -857,6 +857,14 @@
           "Name": "JoinCgroup",
           "Params":
           {
+            "Controller": "cpuset",
+            "Path": "midground"
+          }
+        },
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
             "Controller": "cpu",
             "Path": "midground"
           }
@@ -928,7 +936,7 @@
     },
     {
       "Name": "Dex2OatBootComplete",
-      "Profiles": [ "Dex2oatPerformance", "LowIoPriority", "TimerSlackHigh" ]
+      "Profiles": [ "Dex2oatPerformance", "JoinInteractiveDexopt", "LowIoPriority", "TimerSlackHigh" ]
     },
     {
       "Name": "Dex2OatBackground",
