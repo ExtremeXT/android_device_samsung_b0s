@@ -25,5 +25,5 @@
 /prism_image	emmc		/dev/block/bootdevice/by-name/prism		flags=backup=1;flashimg=1;display="Prism Image"
 
 # Removable partitions
-/external_sd	auto		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=storage;wipeingui;removable
+#/external_sd	auto		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=storage;wipeingui;removable
 /usb-otg	auto		/dev/block/sdf1		/dev/block/sdf		flags=storage;wipeingui;removable

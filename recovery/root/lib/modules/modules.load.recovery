@@ -266,7 +266,6 @@ common_muic.ko
 flicker_test.ko
 tsl2510.ko
 mesh.ko
-kperfmon.ko
 vibrator_vib_info.ko
 sec_tsp_log.ko
 sec_tclm_v2.ko
