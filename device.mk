@@ -15,6 +15,10 @@ PRODUCT_PACKAGES += \
 # Camera (ID 52 -> telephoto; ID 54 -> second telephoto)
 $(call soong_config_set,samsungCameraVars,extra_ids,52,54)
 
+# Display
+PRODUCT_PACKAGES += \
+    displayconfig.xml
+
 # Init
 PRODUCT_PACKAGES += \
     init.b0s.rc
