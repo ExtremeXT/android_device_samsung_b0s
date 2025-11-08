@@ -16,6 +16,9 @@ vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libtriplecapture_interface.so
 vendor/lib64/libtriplepreview_interface.so
 
+# DQE
+vendor/etc/dqe/calib_data_colormode0_s6e3fac_r0.xml
+
 # Firmware
 vendor/firmware/camera_tilt_calibration_info_1_2
 vendor/firmware/camera_tilt_calibration_info_3_1
