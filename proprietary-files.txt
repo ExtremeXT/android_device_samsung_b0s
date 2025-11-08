@@ -69,3 +69,22 @@ vendor/tee/driver/00000000-0000-0000-0000-564c544b4456|e575937efe59b331f9c0c2bd0
 vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_|dfec28fe72d4422b9a9b0c79dc277612092a38c8
 vendor/tee/ffffffff-0000-0000-0000-000000000030|1807ed1e9aa1693df34b47436b810bbc98c60742
 vendor/tee/tui/resolution_common/ID00000100|a091703ae478a3da9b16201f559d296a665d7b8d
+
+# Wi-Fi
+vendor/etc/init/wifi_qcom_ap_exynos.rc
+vendor/etc/init/wifi.rc
+vendor/firmware/Data.msc
+vendor/firmware/qca6490/amss20.bin
+vendor/firmware/qca6490/bdwlan.elf
+vendor/firmware/qca6490/bdwlan.elf1
+vendor/firmware/qca6490/bdwlan.elf10
+vendor/firmware/qca6490/bdwlan.elf2
+vendor/firmware/qca6490/bdwlang.elf
+vendor/firmware/qca6490/bdwlang.elf1
+vendor/firmware/qca6490/bdwlang.elf10
+vendor/firmware/qca6490/bdwlang.elf2
+vendor/firmware/qca6490/m3.bin
+vendor/firmware/qca6490/regdb.bin
+vendor/firmware/wlan-connection-roaming-backup.ini
+vendor/firmware/wlan-connection-roaming.ini
+vendor/firmware/wlan/qcom_cfg.ini

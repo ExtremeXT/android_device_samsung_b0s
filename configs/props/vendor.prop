@@ -1,3 +1,8 @@
 # Fingerprint
 ro.vendor.fingerprint.sensor_location=540|1744|125
 ro.vendor.fingerprint.type=udfps
+
+# Wi-Fi
+ro.vendor.wifi.sap.interface=wlan1
+vendor.wifi.dualconcurrent.interface=wlan1
+wifi.concurrent.interface=wlan1
