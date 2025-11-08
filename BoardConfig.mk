@@ -8,6 +8,9 @@ include device/samsung/s5e9925-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/r0s
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH_QCOM := true
+
 # Display
 TARGET_SCREEN_DENSITY := 480
 TARGET_SCREEN_HEIGHT := 2340

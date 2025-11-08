@@ -1,6 +1,21 @@
 # All unpinned blobs are from S901BXXSNGZD7
 # Vendor security patch level 2026-05-01
 
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/firmware/bt_nvm_loading_2nd.xml
+vendor/firmware/bt_nvm_loading.xml
+vendor/firmware/hpbtfw20.tlv
+vendor/firmware/hpbtfw21.tlv
+vendor/firmware/hpnv20.bin
+vendor/firmware/hpnv21.bab
+vendor/firmware/hpnv21g.bab
+vendor/firmware/htbtfw20.tlv
+vendor/firmware/htnv20.bin
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
+
 # Camera
 vendor/firmware/setfile_2la.bin
 vendor/firmware/setfile_3k1.bin

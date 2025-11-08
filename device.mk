@@ -7,6 +7,10 @@
 PRODUCT_PACKAGES += \
     mixer_paths.xml
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor
+
 # Camera (ID 52 -> telephoto)
 $(call soong_config_set,samsungCameraVars,extra_ids,52)
 
