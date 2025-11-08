@@ -1,6 +1,21 @@
 # All unpinned blobs are from S901BXXSNGZD7
 # Vendor security patch level 2026-05-01
 
+# Camera
+vendor/firmware/setfile_2la.bin
+vendor/firmware/setfile_3k1.bin
+vendor/firmware/setfile_gn3.bin
+vendor/firmware/setfile_imx374.bin
+vendor/firmware/setfile_imx563.bin
+vendor/firmware/swcnr_IMX374.json
+vendor/firmware/swcnr_S5K2LA.json
+vendor/firmware/swcnr_S5K3K1.json
+vendor/firmware/swcnr_S5KGN3.json
+vendor/lib64/libtriplecam_image_optical_zoom.so
+vendor/lib64/libtriplecam_video_optical_zoom.so
+vendor/lib64/libtriplecapture_interface.so
+vendor/lib64/libtriplepreview_interface.so
+
 # Firmware
 vendor/firmware/camera_tilt_calibration_info_1_2
 vendor/firmware/camera_tilt_calibration_info_3_1
