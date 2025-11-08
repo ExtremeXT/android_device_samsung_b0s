@@ -24,6 +24,10 @@ vendor/firmware/camera_tilt_calibration_info_1_2
 vendor/firmware/camera_tilt_calibration_info_3_1
 vendor/firmware/tsp_stm/fts2ba61y_r0.bin
 
+# RAMDisk
+vendor/firmware/tsp_stm/fts2ba61y_r0.bin:recovery/root/vendor/firmware/tsp_stm/fts2ba61y_r0.bin
+vendor/firmware/tsp_stm/fts2ba61y_r0.bin:vendor_ramdisk/vendor/firmware/tsp_stm/fts2ba61y_r0.bin
+
 # TEEgris Firmware (S901BXXSIFYI3)
 vendor/tee/00000000-0000-0000-0000-000000010081|ba5beba3be805351ae57c53a75e287af7ec06c6b
 vendor/tee/00000000-0000-0000-0000-000000020081|5891a37bf8954148a8966c4dd5b3522cbf18e1e3
