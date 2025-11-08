@@ -1,2 +1,7 @@
 # All unpinned blobs are from S901BXXSNGZD7
 # Vendor security patch level 2026-05-01
+
+# Firmware
+vendor/firmware/camera_tilt_calibration_info_1_2
+vendor/firmware/camera_tilt_calibration_info_3_1
+vendor/firmware/tsp_stm/fts2ba61y_r0.bin
