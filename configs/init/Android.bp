@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.r0s.rc",
+    relative_install_path: "init",
+    src: "init.r0s.rc",
+    vendor: true,
+}
