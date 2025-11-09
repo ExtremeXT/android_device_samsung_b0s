@@ -12,3 +12,6 @@ DEVICE_PATH := device/samsung/r0s
 TARGET_SCREEN_DENSITY := 480
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
