@@ -21,6 +21,13 @@ PRODUCT_PACKAGES += \
 # NFC
 BOARD_HAVE_NXP_NFC := true
 
+# Overlays 
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayDevice \
+    SettingsProviderOverlayDevice \
+    SystemUIOverlayDevice \
+    WiFiOverlayDevice
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
