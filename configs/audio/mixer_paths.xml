@@ -199,7 +199,7 @@
   </path>
   <!-- Communication playback volume -->
   <path name="gain-communication-handset">
-    <ctl name="Left AMP PCM Gain" value="4"/>
+    <ctl name="Left AMP PCM Gain" value="3"/>
     <ctl name="Left Digital PCM Volume" value="817"/>
   </path>
   <path name="gain-communication-speaker">
@@ -281,7 +281,7 @@
     </path>
   <!-- samsung voip fmc playback volume -->
   <path name="gain-samsung_voip_fmc-handset">
-    <ctl name="Left AMP PCM Gain" value="4"/>
+    <ctl name="Left AMP PCM Gain" value="3"/>
     <ctl name="Left Digital PCM Volume" value="817"/>
   </path>
   <path name="gain-samsung_voip_fmc-speaker">
@@ -318,7 +318,7 @@
     </path>
   <!-- voip playback volume -->
   <path name="gain-voip-handset">
-    <ctl name="Left AMP PCM Gain" value="4"/>
+    <ctl name="Left AMP PCM Gain" value="3"/>
     <ctl name="Left Digital PCM Volume" value="817"/>
   </path>
   <path name="gain-voip-speaker">

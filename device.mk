@@ -9,6 +9,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0.vendor
 
 # Camera (ID 52 -> telephoto)
@@ -16,7 +17,7 @@ $(call soong_config_set,samsungCameraVars,extra_ids,52)
 
 # Init
 PRODUCT_PACKAGES += \
-    init.r0s.rc
+    init.g0s.rc
 
 # NFC
 BOARD_HAVE_NXP_NFC := true
@@ -31,15 +32,12 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/qcom-caf/wlan \
-    hardware/qcom-caf/wlan/qcwcn
+    $(LOCAL_PATH)
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libcld80211 \
     wpa_supplicant \
     wpa_supplicant.conf
 
@@ -47,4 +45,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, device/samsung/s5e9925-common/device-common.mk)
 
 # Inherit from the proprietary version
-$(call inherit-product-if-exists, vendor/samsung/r0s/r0s-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/g0s/g0s-vendor.mk)

@@ -4,8 +4,8 @@
 //
 
 prebuilt_etc {
-    name: "init.r0s.rc",
+    name: "init.g0s.rc",
     relative_install_path: "init",
-    src: "init.r0s.rc",
+    src: "init.g0s.rc",
     vendor: true,
 }
