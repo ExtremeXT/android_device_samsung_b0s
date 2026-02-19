@@ -1,3 +1,3 @@
 # Fingerprint
-ro.vendor.fingerprint.sensor_location=540|1789|114
+ro.vendor.fingerprint.sensor_location=720|2280|150
 ro.vendor.fingerprint.type=udfps

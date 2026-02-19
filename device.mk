@@ -12,12 +12,12 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0.vendor
 
-# Camera (ID 52 -> telephoto)
-$(call soong_config_set,samsungCameraVars,extra_ids,52)
+# Camera (ID 52 -> telephoto; ID 54 -> second telephoto)
+$(call soong_config_set,samsungCameraVars,extra_ids,52,54)
 
 # Init
 PRODUCT_PACKAGES += \
-    init.g0s.rc
+    init.b0s.rc
 
 # NFC
 BOARD_HAVE_NXP_NFC := true
@@ -55,4 +55,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, device/samsung/s5e9925-common/device-common.mk)
 
 # Inherit from the proprietary version
-$(call inherit-product-if-exists, vendor/samsung/g0s/g0s-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/b0s/b0s-vendor.mk)

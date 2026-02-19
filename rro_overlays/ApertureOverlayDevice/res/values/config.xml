@@ -20,5 +20,6 @@
     <string-array name="config_logicalZoomRatios">
         <item>0</item> <item>0.6</item> <item>0.60000002</item>
         <item>0</item> <item>3</item> <item>3</item>
+        <item>0</item> <item>10</item> <item>10</item>
     </string-array>
 </resources>

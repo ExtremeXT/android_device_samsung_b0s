@@ -1,4 +1,0 @@
-on boot
-    # PMIC: S2DOS05 Display PMIC
-    chown system system /sys/class/sec/disp_pmic/enable_fd
-    chown system system /sys/class/sec/disp_pmic/power_meter/adc_mode

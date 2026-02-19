@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <dimen name="rounded_corner_content_padding">20dp</dimen>
+    <dimen name="rounded_corner_content_padding">5dp</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
     <dimen name="keyguard_carrier_text_margin">25dp</dimen>
@@ -17,9 +17,9 @@
      display fingerprint sensors, this directly corresponds to the fingerprint sensor's location.
      For devices with sensors on the back of the device, this corresponds to the location on the
      screen directly in front of the sensor. -->
-    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1789px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">2280px</dimen>
 
     <!-- Microns/ums (1000 um = 1mm) per pixel for the given device. If unspecified, UI that
          relies on this value will not be sized correctly. -->
-    <item name="pixel_pitch" format="float" type="dimen">65.07</item>
+    <item name="pixel_pitch" format="float" type="dimen">50.74</item>
 </resources>

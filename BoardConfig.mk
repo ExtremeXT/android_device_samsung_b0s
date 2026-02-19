@@ -6,15 +6,15 @@
 # Inherit from Common Tree
 include device/samsung/s5e9925-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/g0s
+DEVICE_PATH := device/samsung/b0s
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Display
-TARGET_SCREEN_DENSITY := 450
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_DENSITY := 600
+TARGET_SCREEN_HEIGHT := 3088
+TARGET_SCREEN_WIDTH := 1440
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD += dhd.ko
