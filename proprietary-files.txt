@@ -76,6 +76,10 @@ vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_|dfec28fe72d4422b9a9b0c79
 vendor/tee/ffffffff-0000-0000-0000-000000000030|ba03f64f7b1a98a3b527baf7ca303bf1ed3d95ed
 vendor/tee/tui/resolution_common/ID00000100|a091703ae478a3da9b16201f559d296a665d7b8d
 
+# UWB
+vendor/firmware/uwb/libsr100t_dev_fw.bin
+vendor/firmware/uwb/libsr100t_prod_fw.bin
+
 # Wi-Fi
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_brcm.rc
