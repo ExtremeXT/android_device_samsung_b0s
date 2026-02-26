@@ -36,9 +36,13 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # UWB
 PRODUCT_PACKAGES += \
+    android.hardware.uwb-service.nxp \
     libuwb-countrycode.conf \
     libuwb-nxp.conf \
     libuwb-uci.conf
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.uwb.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.uwb.xml
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
