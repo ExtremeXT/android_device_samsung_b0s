@@ -34,6 +34,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# UWB
+PRODUCT_PACKAGES += \
+    libuwb-countrycode.conf \
+    libuwb-nxp.conf \
+    libuwb-uci.conf
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \

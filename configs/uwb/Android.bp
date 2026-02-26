@@ -1,0 +1,22 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "libuwb-countrycode.conf",
+    src: "libuwb-countrycode.conf",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "libuwb-nxp.conf",
+    src: "libuwb-nxp.conf",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "libuwb-uci.conf",
+    src: "libuwb-uci.conf",
+    vendor: true,
+}
