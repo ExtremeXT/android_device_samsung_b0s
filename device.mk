@@ -3,6 +3,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Audio
+PRODUCT_PACKAGES += \
+    mixer_paths.xml
+
 # Init
 PRODUCT_PACKAGES += \
     init.r0s.rc
