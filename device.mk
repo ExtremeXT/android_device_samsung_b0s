@@ -23,6 +23,7 @@ BOARD_HAVE_NXP_NFC := true
 
 # Overlays 
 PRODUCT_PACKAGES += \
+    ApertureOverlayDevice \
     FrameworkResOverlayDevice \
     SettingsProviderOverlayDevice \
     SystemUIOverlayDevice \
