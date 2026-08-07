@@ -18,6 +18,9 @@ $(call soong_config_set,samsungCameraVars,extra_ids,52)
 PRODUCT_PACKAGES += \
     init.r0s.rc
 
+# NFC
+BOARD_HAVE_NXP_NFC := true
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
