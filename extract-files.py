@@ -29,6 +29,9 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
 )
 
+module.add_proprietary_file('../s5e9925-common/proprietary-files-device.txt')
+module.add_proprietary_file('../s5e9925-common/proprietary-files-rgb.txt')
+
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
         module, 's5e9925-common', module.vendor
